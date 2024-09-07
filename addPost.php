@@ -1,5 +1,6 @@
-
-    <?php require_once 'inc/header.php' ?>
+<?php require_once 'inc/header.php';
+  require_once 'inc/db.php';
+?>
 
     <!-- Page Content -->
     <div class="page-heading products-heading header-text">
@@ -17,6 +18,19 @@
 
     
 <div class="container w-50 ">
+  <?php 
+    if(isset($_SESSION['errors']))
+    {
+      foreach($_SESSION['errors'] as $error)
+      {
+        ?> <div class="alert alert-danger">
+          <?php echo $error; ?>
+        </div>
+        <?php
+      }
+    }
+    unset($_SESSION['errors']);
+  ?>
   <div class="d-flex justify-content-center">
     <h3 class="my-5">add new Post</h3>
   </div>

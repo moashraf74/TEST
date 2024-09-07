@@ -18,7 +18,7 @@
     <h3 class="my-5">edit Post</h3>
   </div>
 
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST" action="handel/handel.php" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title" value="">
